@@ -7,12 +7,20 @@ html, body { width: 100%; height: 100%; }
 h2 { 
 	font-family: 'Roboto Mono', monospace;
 	font-size: 100px;
-	text-align: left;
+	text-align: center;
 	margin-top: 40px;
 	margin-left: 20px;
 	color: white;
 }
-
+#helloworld_title {
+	color: #202020;
+}
+p {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 20px;
+	color: black;
+	margin-top: 80px;
+}
 a {
 	font-family: 'Roboto Mono', monospace;
 	font-size: 50px;
@@ -32,4 +40,38 @@ a:visited {
 body {
 	background: -webkit-linear-gradient(#FFA194, #FFFFFF);
 }
+
+#helloworld1 {
+	background: #FFDE62;
+}
+
+#hello {
+	text-align: center;
+	padding-top: 10em;
+}
+
+#do_you {
+	margin-left: 40px;
+	padding-top: 30em;
+}
+
+#luck {
+	text-align: left;
+	margin-left: 40px;
+	padding-top: 20em;
+}
+
+#or {
+	text-align: center;
+	padding-top: 20em;
+}
+
+#happiness {
+	text-align: right;
+	margin-right: 30px;
+	padding-top: 20em;
+	padding-bottom: 10em;
+}
+
+
 
