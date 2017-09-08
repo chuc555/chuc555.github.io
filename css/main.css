@@ -37,6 +37,14 @@ body {
 	background: -webkit-linear-gradient(#FFA194, #FFFFFF);
 }
 
+#luck_bg {
+	background: #DBF9B9;
+}
+
+#happiness_bg{
+	background: #B6D7FF;
+}
+
 #helloworld1 {
 	background: #FFDE62;
 }
@@ -82,6 +90,29 @@ body {
 	border-bottom: none;
 }
 
+
+.luck_text {
+	font-family: 'Roboto Mono', monospace;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 60px;
+	padding-bottom: 30px;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+	line-height: 30px;
+}
+
+.happiness_text {
+	font-family: 'Roboto Mono', monospace;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 60px;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+	line-height: 30px;
+}
 
 
 
