@@ -7,7 +7,7 @@ html, body { width: 100%; height: 100%; }
 h2 { 
 	font-family: 'Roboto Mono', monospace;
 	font-size: 100px;
-	text-align: center;
+	text-align: left;
 	margin-top: 40px;
 	margin-left: 20px;
 	color: white;
@@ -28,6 +28,8 @@ a {
 	line-height: 120px;
 	color: white;
 }
+
+a
 
 a:hover {
     color: #FF6363;
