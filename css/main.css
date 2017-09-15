@@ -15,11 +15,14 @@ h2 {
 	color: #202020;
 }
 
+
 p {
 	font-family: 'Roboto Mono', monospace;
 	font-size: 20px;
 	color: black;
 	margin-top: 80px;
+	margin-left: 80px;
+	text-align: center;
 }
 
 a {
@@ -119,6 +122,10 @@ body {
 
 .test {
 	background-color: white;
+}
+
+#hiddenpattern {
+	color: white;
 }
 
 

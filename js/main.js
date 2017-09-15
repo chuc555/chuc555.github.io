@@ -21,11 +21,19 @@ $(document).ready(function() {
 let starArray = ['*_*_*_*_*_*_*_*_*_*','*_*_*_*_*_*_*_*','*_*_*_*_*_*','*_*_*_*','*_*'];
 
 for (let starArrayIndex = 0; starArrayIndex < starArray.length; starArrayIndex++) {
+  for (let starArrayIndex = 1; starArrayIndex < starArray.length; starArrayIndex++) {
   console.log(starArray[starArrayIndex]);
+    for (let starArrayIndex = 2; starArrayIndex < starArray.length; starArrayIndex++) {
+      console.log(starArray[starArrayIndex] + ' @@@@@');
+    }
+  }
 }
-for (let starArrayIndex = starArray.length - 1; starArrayIndex >=0; starArrayIndex--) {
-  console.log(starArray[starArrayIndex]);
-}
+
+//going backwards
+// for (let starArrayIndex = starArray.length - 1; starArrayIndex >=0; starArrayIndex--) {
+//   console.log(starArray[starArrayIndex]);
+// }
+
 
 
 
