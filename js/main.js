@@ -17,7 +17,6 @@ $(document).ready(function() {
 
 
 //HIDDEN PATTERN PAGE
-
 let starArray = ['*_*_*_*_*_*_*_*_*_*','*_*_*_*_*_*_*_*','*_*_*_*_*_*','*_*_*_*','*_*'];
 
 for (let starArrayIndex = 0; starArrayIndex < starArray.length; starArrayIndex++) {
@@ -25,6 +24,9 @@ for (let starArrayIndex = 0; starArrayIndex < starArray.length; starArrayIndex++
   console.log(starArray[starArrayIndex]);
     for (let starArrayIndex = 2; starArrayIndex < starArray.length; starArrayIndex++) {
       console.log(starArray[starArrayIndex] + ' @@@@@');
+      for (let starArrayIndex = 3; starArrayIndex < starArray.length; starArrayIndex++) {
+        console.log(starArray[starArrayIndex] + ' ^&^&^&^')
+      }
     }
   }
 }

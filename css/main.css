@@ -43,6 +43,12 @@ body {
 	background: -webkit-linear-gradient(#FFA194, #FFFFFF);
 }
 
+#hiddenpattern {
+	height: 100%;
+	margin: 0;
+	background: white;
+}
+
 #luck_bg {
 	background: #DBF9B9;
 }
@@ -124,9 +130,6 @@ body {
 	background-color: white;
 }
 
-#hiddenpattern {
-	color: white;
-}
 
 
 
