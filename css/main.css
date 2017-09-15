@@ -2,6 +2,17 @@ html, body { width: 100%; height: 100%; }
 
 /*@font-face { font-family: "avenirnextbold"; src: url("../fonts/avenir.next.bold.ttf"); }*/
 
+html {
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+     background-repeat:no-repeat;
+  /*	background: -webkit-linear-gradient(#FFA194, #FFFFFF);*/
+  	background-color: #2452F1;
+}
+
 h2 { 
 	font-family: 'Roboto Mono', monospace;
 	font-size: 80px;
@@ -15,16 +26,24 @@ h2 {
 	color: #202020;
 }
 
-p.hiddenpattern {
-	color:red;
+#fall {
+	color: #FFEC00;
 }
-
 p {
 	font-family: 'Roboto Mono', monospace;
 	font-size: 20px;
 	color: black;
 	margin-top: 80px;
 	margin-left: 80px;
+	text-align: left;
+}
+
+p.index {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 50px;
+	color: white;
+	margin-top: 80px;
+	margin-left: 100px;
 	text-align: left;
 }
 
@@ -40,16 +59,22 @@ a:hover {
     color: #FF6767;
 }
 
-body {
+/*body {
 	height: 150%;
 	margin: 0;
 	background: -webkit-linear-gradient(#FFA194, #FFFFFF);
-}
+}*/
 
-#hiddenpattern {
+#hiddenhtml {
 	height: 100%;
 	margin: 0;
-	background: white;
+	background-size: cover;
+	background-color: white;
+}
+
+.hidden {
+	text-align: center;
+	padding-top: 120px;
 }
 
 #luck_bg {
