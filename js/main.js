@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  
+// HELLO WORLD PAGE
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
       $(".happiness_text").addClass("test");
@@ -13,26 +15,32 @@ $(document).ready(function() {
     }
   });
 
-  
 
-var simpleArray = [1,2,3,4,5,6,7,8,9,10]
+//HIDDEN PATTERN PAGE
 
+let starArray = ['*_*_*_*_*_*_*_*_*_*','*_*_*_*_*_*_*_*','*_*_*_*_*_*','*_*_*_*','*_*'];
 
-for (var i = 0; i < simpleArray.length; i++){
-
-    if(simpleArray[i] % 2 == 0){
-
-        console.log("even: " + simpleArray[i])
-
-    } else{
-
-        console.log("odd: " + simpleArray[i])
-
-    }   
+for (let starArrayIndex = 0; starArrayIndex < starArray.length; starArrayIndex++) {
+  console.log(starArray[starArrayIndex]);
+}
+for (let starArrayIndex = starArray.length - 1; starArrayIndex >=0; starArrayIndex--) {
+  console.log(starArray[starArrayIndex]);
 }
 
 
+
+
+
+
+
+
 });
+
+//for loops follow this pattern
+  // for (let i = 0; i < myArray.length; i++) {
+  //     console.log(myArray[i]);
+  // }
+
 //using mathematical operators in the console
   // console.log("what's up dog");
   // console.log(3+5);
