@@ -1,17 +1,16 @@
 html, body { width: 100%; height: 100%; }
 
-/*@font-face { font-family: "avenirnextbold"; src: url("../fonts/avenir.next.bold.ttf"); }*/
-
-html {
+html.indexHtml {
     height: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-     background-repeat:no-repeat;
+    background-repeat:no-repeat;
   /*	background: -webkit-linear-gradient(#FFA194, #FFFFFF);*/
   	background-color: #2452F1;
 }
+
 
 h2 { 
 	font-family: 'Roboto Mono', monospace;
@@ -22,8 +21,13 @@ h2 {
 	color: white;
 }
 
-#helloworld_title {
-	color: #202020;
+#webAdvanced:hover {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  cursor: cell;
 }
 
 #fall {
@@ -57,24 +61,19 @@ a {
 
 a:hover {
     color: #FF6767;
+    cursor: help;
 }
 
-/*body {
-	height: 150%;
-	margin: 0;
-	background: -webkit-linear-gradient(#FFA194, #FFFFFF);
-}*/
+.hover_hiddenPattern img {display: none; position: absolute; opacity: 0.9; height: 300px;left: 650px; top: 580px;}
+.hover_hiddenPattern:hover img {display: block;}
 
-#hiddenhtml {
-	height: 100%;
-	margin: 0;
-	background-size: cover;
-	background-color: white;
-}
 
-.hidden {
-	text-align: center;
-	padding-top: 120px;
+
+
+
+/*PROJECT 1: HELLO WORLD*/
+#helloworld_title {
+	color: #202020;
 }
 
 #luck_bg {
@@ -130,7 +129,6 @@ a:hover {
 	border-bottom: none;
 }
 
-
 .luck_text {
 	font-family: 'Roboto Mono', monospace;
 	padding-left: 60px;
@@ -154,8 +152,17 @@ a:hover {
 	line-height: 30px;
 }
 
-.test {
+/*PROJECT 2: HIDDEN PATTERN PT 1*/
+#hiddenhtml {
+	height: 100%;
+	margin: 0;
+	background-size: cover;
 	background-color: white;
+}
+
+.hidden {
+	text-align: center;
+	padding-top: 120px;
 }
 
 

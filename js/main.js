@@ -1,6 +1,6 @@
 $(document).ready(function() {
   
-// HELLO WORLD PAGE
+// 1 HELLO WORLD PAGE
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
       $(".happiness_text").addClass("test");
@@ -16,7 +16,7 @@ $(document).ready(function() {
   });
 
 
-//HIDDEN PATTERN PAGE
+// 2 HIDDEN PATTERN PAGE
 let starArray = ['*_*_*_*_*_*_*_*_*_*','*_*_*_*_*_*_*_*','*_*_*_*_*_*','*_*_*_*','*_*'];
 
 for (let starArrayIndex = 0; starArrayIndex < starArray.length; starArrayIndex++) {
@@ -30,21 +30,16 @@ for (let starArrayIndex = 0; starArrayIndex < starArray.length; starArrayIndex++
     }
   }
 }
+});
+
+
+
+
 
 //going backwards
-// for (let starArrayIndex = starArray.length - 1; starArrayIndex >=0; starArrayIndex--) {
-//   console.log(starArray[starArrayIndex]);
-// }
-
-
-
-
-
-
-
-
-
-});
+  // for (let starArrayIndex = starArray.length - 1; starArrayIndex >=0; starArrayIndex--) {
+  //   console.log(starArray[starArrayIndex]);
+  // }
 
 //for loops follow this pattern
   // for (let i = 0; i < myArray.length; i++) {
@@ -116,5 +111,19 @@ for (let starArrayIndex = 0; starArrayIndex < starArray.length; starArrayIndex++
   //   console.log('Back on two feet.'); break;
   //   default:
   //   console.log('Invalid moon phase.'); break;
+  // }
+
+
+  // var array = ["one","two"]
+
+  // for(var i = 0; i < array.length; i++){
+
+  //   var outPutString = " "
+
+  //   for(var x= 0, x <= 7; x++){
+  //     outPUtstring += array[i] + " ";
+  //   }
+
+  //   console.log(outPutString);
   // }
 
