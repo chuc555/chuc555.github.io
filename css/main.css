@@ -162,7 +162,8 @@ a:hover {
 
 .hidden {
 	text-align: center;
-	padding-top: 120px;
+	line-height: 2em;
+	margin-top: 80px;
 }
 
 

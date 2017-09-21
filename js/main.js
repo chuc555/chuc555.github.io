@@ -17,19 +17,58 @@ $(document).ready(function() {
 
 
 // 2 HIDDEN PATTERN PAGE
-let starArray = ['*_*_*_*_*_*_*_*_*_*','*_*_*_*_*_*_*_*','*_*_*_*_*_*','*_*_*_*','*_*'];
+var pattern1 = ["⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢"]
+var pattern2 = ["⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡"]
 
-for (let starArrayIndex = 0; starArrayIndex < starArray.length; starArrayIndex++) {
-  for (let starArrayIndex = 1; starArrayIndex < starArray.length; starArrayIndex++) {
-  console.log(starArray[starArrayIndex]);
-    for (let starArrayIndex = 2; starArrayIndex < starArray.length; starArrayIndex++) {
-      console.log(starArray[starArrayIndex] + ' @@@@@');
-      for (let starArrayIndex = 3; starArrayIndex < starArray.length; starArrayIndex++) {
-        console.log(starArray[starArrayIndex] + ' ^&^&^&^')
-      }
-    }
+for (var i = 0; i < 3; i++) {
+  var outPutString1 = " "
+  for (var x = 0; x <= 4; x++){
+    outPutString1 += pattern1[i];
   }
+  console.log(outPutString1);
 }
+
+for (var h = 0; h < 3; h++) {
+  var outPutString2 = " "
+  for (var j = 0; j <= 4; j++){
+    outPutString2 += pattern2[h];
+  }
+  console.log(outPutString2);
+}
+
+for (var i = 0; i < 3; i++) {
+  var outPutString1 = " "
+  for (var x = 0; x <= 4; x++){
+    outPutString1 += pattern1[i];
+  }
+  console.log(outPutString1);
+}
+
+for (var h = 0; h < 3; h++) {
+  var outPutString2 = " "
+  for (var j = 0; j <= 4; j++){
+    outPutString2 += pattern2[h];
+  }
+  console.log(outPutString2);
+}
+
+for (var i = 0; i < 3; i++) {
+  var outPutString1 = " "
+  for (var x = 0; x <= 4; x++){
+    outPutString1 += pattern1[i];
+  }
+  console.log(outPutString1);
+}
+
+for (var h = 0; h < 3; h++) {
+  var outPutString2 = " "
+  for (var j = 0; j <= 4; j++){
+    outPutString2 += pattern2[h];
+  }
+  console.log(outPutString2);
+}
+
+
 });
 
 
