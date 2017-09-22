@@ -21,294 +21,140 @@ $(document).ready(function() {
 
 var pattern1 = ["⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢"];
 var pattern2 = ["⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡"];
-var pattern3 = ["▲▲▲▲▲▲▲▲△△△△△△△","▲▲▲▲▲▲▲▲△△△△△△△△","▲▲▲▲▲▲▲▲△△△△△△△△","▲▲▲▲▲▲▲▲△△△△△△△△","▲▲▲▲▲▲▲▲△△△△△△△△"]
+
+var pattern3 = ["▲▲▲▲▲▲▲▲△△△△△△△△","▲▲▲▲▲▲▲▲△△△△△△△△","▲▲▲▲▲▲▲▲△△△△△△△△","▲▲▲▲▲▲▲▲△△△△△△△△","▲▲▲▲▲▲▲▲△△△△△△△△"]
 var pattern4 = ["△△△△△△△△▲▲▲▲▲▲▲▲","△△△△△△△△▲▲▲▲▲▲▲▲","△△△△△△△△▲▲▲▲▲▲▲▲","△△△△△△△△▲▲▲▲▲▲▲▲","△△△△△△△△▲▲▲▲▲▲▲▲"]
 
 var pattern5 = ["▓▓▓▓▓▓▓▓░░░░░░░░","▓▓▓▓▓▓▓▓░░░░░░░░","▓▓▓▓▓▓▓▓░░░░░░░░","▓▓▓▓▓▓▓▓░░░░░░░░","▓▓▓▓▓▓▓▓░░░░░░░░"]
 var pattern6 = ["░░░░░░░░▓▓▓▓▓▓▓▓","░░░░░░░░▓▓▓▓▓▓▓▓","░░░░░░░░▓▓▓▓▓▓▓▓","░░░░░░░░▓▓▓▓▓▓▓▓","░░░░░░░░▓▓▓▓▓▓▓▓"]
+
+var pattern7 = ["▤▤▤▤▤▤▤▤▤▩▩▩▩▩▩▩▩▩","▤▤▤▤▤▤▤▤▤▩▩▩▩▩▩▩▩▩","▤▤▤▤▤▤▤▤▤▩▩▩▩▩▩▩▩▩","▤▤▤▤▤▤▤▤▤▩▩▩▩▩▩▩▩▩","▤▤▤▤▤▤▤▤▤▩▩▩▩▩▩▩▩▩"]
+var pattern8 = ["▩▩▩▩▩▩▩▩▩▤▤▤▤▤▤▤▤▤","▩▩▩▩▩▩▩▩▩▤▤▤▤▤▤▤▤▤","▩▩▩▩▩▩▩▩▩▤▤▤▤▤▤▤▤▤","▩▩▩▩▩▩▩▩▩▤▤▤▤▤▤▤▤▤","▩▩▩▩▩▩▩▩▩▤▤▤▤▤▤▤▤▤"]
+
+var pattern9 = ["⟡⟡⟡⟡⟡⟡⟡⟡◆◆◆◆◆◆◆◆","⟡⟡⟡⟡⟡⟡⟡⟡◆◆◆◆◆◆◆◆","⟡⟡⟡⟡⟡⟡⟡⟡◆◆◆◆◆◆◆◆","⟡⟡⟡⟡⟡⟡⟡⟡◆◆◆◆◆◆◆◆","⟡⟡⟡⟡⟡⟡⟡⟡◆◆◆◆◆◆◆◆","⟡⟡⟡⟡⟡⟡⟡⟡◆◆◆◆◆◆◆◆"]
+var pattern10 = ["◆◆◆◆◆◆◆◆⟡⟡⟡⟡⟡⟡⟡⟡","◆◆◆◆◆◆◆◆⟡⟡⟡⟡⟡⟡⟡⟡","◆◆◆◆◆◆◆◆⟡⟡⟡⟡⟡⟡⟡⟡","◆◆◆◆◆◆◆◆⟡⟡⟡⟡⟡⟡⟡⟡","◆◆◆◆◆◆◆◆⟡⟡⟡⟡⟡⟡⟡⟡"]
   
 var timer = 0;
-var timer2 = 0;
+var timer2 = 1000;
+var timer3 = 1500;
+var timer4 = 2000;
+var timer5 = 2500;
 
-
-// for (var m = 0; m < 7; m++) {
-
-//   setTimeout (function(){
-//   for (var i = 0; i < 3; i++) {
-//   var outPutString1 = " "
-//     for (var x = 0; x <= 8; x++){
-//       outPutString1 += pattern1[i];
-//       }
-//     console.log(outPutString1);
-//     }
-//  }, 500);
-
-//   setTimeout (function(){
-//   for (var h = 0; h < 3; h++) {
-//   var outPutString2 = " "
-//     for (var j = 0; j <= 8; j++){
-//       outPutString2 += pattern2[h];
-//       }
-//     console.log(outPutString2);
-//     }
-//   }, 1000);
-// }
-
-
-setTimeout (function(){
+// patterns 1 and 2
+for (var m = 0; m < 4; m++) {
+setTimeout(function(){
+  
   for (var i = 0; i < 3; i++) {
-  var outPutString1 = " "
-  for (var x = 0; x <= 4; x++){
-    outPutString1 += pattern1[i];
-  }
-  console.log(outPutString1);
-}
-}, 200);
+    var outPutString1 = " "
+      for (var x = 0; x <= 6; x++){
+      outPutString1 += pattern1[i];
+      }
+    console.log(outPutString1);
+   }
 
-setTimeout (function(){
-for (var h = 0; h < 3; h++) {
-  var outPutString2 = " "
-  for (var j = 0; j <= 4; j++){
-    outPutString2 += pattern2[h];
-  }
-  console.log(outPutString2);
+  for (var h = 0; h < 3; h++) {
+    var outPutString2 = " "
+      for (var j = 0; j <= 6; j++){
+      outPutString2 += pattern2[h];
+      }
+    console.log(outPutString2);
+   }   
+},timer)
+timer += 100;
 }
-}, 400);
 
-setTimeout (function(){
-  for (var i = 0; i < 3; i++) {
-  var outPutString1 = " "
-  for (var x = 0; x <= 4; x++){
-    outPutString1 += pattern1[i];
-  }
-  console.log(outPutString1);
-}
-}, 800);
-
-setTimeout (function(){
-for (var h = 0; h < 3; h++) {
-  var outPutString2 = " "
-  for (var j = 0; j <= 4; j++){
-    outPutString2 += pattern2[h];
-  }
-  console.log(outPutString2);
-}
-}, 1000);
-
-setTimeout (function(){
-  for (var i = 0; i < 3; i++) {
-  var outPutString1 = " "
-  for (var x = 0; x <= 4; x++){
-    outPutString1 += pattern1[i];
-  }
-  console.log(outPutString1);
-}
-}, 1200);
-
-setTimeout (function(){
-for (var h = 0; h < 3; h++) {
-  var outPutString2 = " "
-  for (var j = 0; j <= 4; j++){
-    outPutString2 += pattern2[h];
-  }
-  console.log(outPutString2);
-}
-}, 1400);
-
-setTimeout (function(){
-  for (var i = 0; i < 3; i++) {
-  var outPutString1 = " "
-  for (var x = 0; x <= 4; x++){
-    outPutString1 += pattern1[i];
-  }
-  console.log(outPutString1);
-}
-}, 1600);
-
-setTimeout (function(){
-for (var h = 0; h < 3; h++) {
-  var outPutString2 = " "
-  for (var j = 0; j <= 4; j++){
-    outPutString2 += pattern2[h];
-  }
-  console.log(outPutString2);
-}
-}, 1800);
-
-setTimeout (function(){
-  for (var i = 0; i < 3; i++) {
-  var outPutString1 = " "
-  for (var x = 0; x <= 4; x++){
-    outPutString1 += pattern1[i];
-  }
-  console.log(outPutString1);
-}
-}, 2000);
-
-setTimeout (function(){
-  for (var b = 0; b < 3; b++) {
+// patterns 3 and 4
+for (var b = 0; b < 4; b++) {
+setTimeout(function(){
+  
+    for (var k = 0; k < 3; k++) {
     var outPutString3 = " "
-    for (var k = 0; k <= 4; k++){
-      outPutString3 += pattern3[k];
-    }
-    console.log(outPutString3);
+      for (var n = 0; n <=6; n++){
+        outPutString3 += pattern3[k];
+      }
+    console.log(outPutString3);  
   }
-}, 2200);
-
-setTimeout (function(){
-  for (var l = 0; l < 3; l++) {
+  
+  for (var l = 0; l<3; l++) {
     var outPutString4 = " "
-    for (var a = 0; a <= 4; a++){
+    for (var a = 0; a <= 6; a++){
       outPutString4 += pattern4[l];
     }
     console.log(outPutString4);
-  }
-}, 2400);
+  }  
+}, timer2)
+timer2 += 100;
+}  
 
-setTimeout (function(){
-  for (var b = 0; b < 3; b++) {
-    var outPutString3 = " "
-    for (var k = 0; k <= 4; k++){
-      outPutString3 += pattern3[k];
-    }
-    console.log(outPutString3);
-  }
-}, 2600);
-
-setTimeout (function(){
-  for (var l = 0; l < 3; l++) {
-    var outPutString4 = " "
-    for (var a = 0; a <= 4; a++){
-      outPutString4 += pattern4[l];
-    }
-    console.log(outPutString4);
-  }
-}, 2800);
-
-setTimeout (function(){
-  for (var b = 0; b < 3; b++) {
-    var outPutString3 = " "
-    for (var k = 0; k <= 4; k++){
-      outPutString3 += pattern3[k];
-    }
-    console.log(outPutString3);
-  }
-}, 3000);
-
-setTimeout (function(){
-  for (var l = 0; l < 3; l++) {
-    var outPutString4 = " "
-    for (var a = 0; a <= 4; a++){
-      outPutString4 += pattern4[l];
-    }
-    console.log(outPutString4);
-  }
-}, 3200);
-
-setTimeout (function(){
-  for (var b = 0; b < 3; b++) {
-    var outPutString3 = " "
-    for (var k = 0; k <= 4; k++){
-      outPutString3 += pattern3[k];
-    }
-    console.log(outPutString3);
-  }
-}, 3400);
-
-setTimeout (function(){
-  for (var l = 0; l < 3; l++) {
-    var outPutString4 = " "
-    for (var a = 0; a <= 4; a++){
-      outPutString4 += pattern4[l];
-    }
-    console.log(outPutString4);
-  }
-}, 3600);
-
-setTimeout (function(){
-  for (var c = 0; c < 3; c++) {
+// patterns 5 and 6
+for (var g = 0; g < 4; g++) {
+setTimeout(function(){
+  
+    for (var p= 0; p < 3; p++) {
     var outPutString5 = " "
-    for (var d = 0; d <= 4; d++){
-      outPutString5 += pattern5[c];
-    }
-    console.log(outPutString5);
+      for (var r = 0; r <=6; r++){
+        outPutString5 += pattern5[p];
+      }
+    console.log(outPutString5);  
   }
-}, 3800);
-
-setTimeout (function(){
-  for (var e = 0; e < 3; e++) {
+  
+  for (var l = 0; l<3; l++) {
     var outPutString6 = " "
-    for (var f = 0; f <= 4; f++){
-      outPutString6 += pattern6[e];
+    for (var a = 0; a <= 6; a++){
+      outPutString6 += pattern6[l];
     }
     console.log(outPutString6);
-  }
-}, 4000);
+  }  
+}, timer3)
+timer3 += 100;
+}  
 
-setTimeout (function(){
-  for (var c = 0; c < 3; c++) {
-    var outPutString5 = " "
-    for (var d = 0; d <= 4; d++){
-      outPutString5 += pattern5[c];
+// patterns 7 and 8
+for (var q = 0; q < 4; q++) {
+setTimeout(function(){
+  
+    for (var f= 0; f < 3; f++) {
+    var outPutString7 = " "
+      for (var o = 0; o <=6; o++){
+        outPutString7 += pattern7[f];
+      }
+    console.log(outPutString7);  
+  }
+  
+  for (var s = 0; s<3; s++) {
+    var outPutString8 = " "
+    for (var t = 0; t <= 6; t++){
+      outPutString8 += pattern8[s];
     }
-    console.log(outPutString5);
-  }
-}, 4200);
+    console.log(outPutString8);
+  }  
+}, timer4)
+timer4 += 100;
+} 
 
-setTimeout (function(){
-  for (var e = 0; e < 3; e++) {
-    var outPutString6 = " "
-    for (var f = 0; f <= 4; f++){
-      outPutString6 += pattern6[e];
+
+// patterns 9 and 10
+for (var u = 0; u < 4; u++) {
+setTimeout(function(){
+  
+    for (var v= 0; v < 3; v++) {
+    var outPutString9 = " "
+      for (var w = 0; w <=6; w++){
+        outPutString9 += pattern9[v];
+      }
+    console.log(outPutString9);  
+  }
+  
+  for (var y = 0; y<3; y++) {
+    var outPutString10 = " "
+    for (var z = 0; z <= 6; z++){
+      outPutString10 += pattern10[y];
     }
-    console.log(outPutString6);
-  }
-}, 4400);
-
-setTimeout (function(){
-  for (var c = 0; c < 3; c++) {
-    var outPutString5 = " "
-    for (var d = 0; d <= 4; d++){
-      outPutString5 += pattern5[c];
-    }
-    console.log(outPutString5);
-  }
-}, 4400);
-
-setTimeout (function(){
-  for (var e = 0; e < 3; e++) {
-    var outPutString6 = " "
-    for (var f = 0; f <= 4; f++){
-      outPutString6 += pattern6[e];
-    }
-    console.log(outPutString6);
-  }
-}, 4600);
-
-setTimeout (function(){
-  for (var c = 0; c < 3; c++) {
-    var outPutString5 = " "
-    for (var d = 0; d <= 4; d++){
-      outPutString5 += pattern5[c];
-    }
-    console.log(outPutString5);
-  }
-}, 4800);
-
-setTimeout (function(){
-  for (var e = 0; e < 3; e++) {
-    var outPutString6 = " "
-    for (var f = 0; f <= 4; f++){
-      outPutString6 += pattern6[e];
-    }
-    console.log(outPutString6);
-  }
-}, 5000);
-
-
-
-
-
+    console.log(outPutString10);
+  }  
+}, timer5)
+timer5 += 100;
+} 
 
 // final bracket of document
 });
