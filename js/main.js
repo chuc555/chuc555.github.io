@@ -17,56 +17,37 @@ $(document).ready(function() {
 
 
 // 2 HIDDEN PATTERN PAGE
-var pattern1 = ["⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢"]
-var pattern2 = ["⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡"]
 
-for (var i = 0; i < 3; i++) {
+
+var pattern1 = ["⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢","⬡⬡⬡⬡⬡⬢⬢⬢⬢⬢"];
+var pattern2 = ["⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡","⬢⬢⬢⬢⬢⬡⬡⬡⬡⬡"];
+
+
+for (var m = 0; m < 7; m++) {
+
+  setTimeout(function(){
+  for (var i = 0; i < 3; i++) {
   var outPutString1 = " "
-  for (var x = 0; x <= 4; x++){
-    outPutString1 += pattern1[i];
-  }
-  console.log(outPutString1);
-}
+    for (var x = 0; x <= 8; x++){
+      outPutString1 += pattern1[i];
+      }
+    console.log(outPutString1);
+    }
+  }, 1500);
 
-for (var h = 0; h < 3; h++) {
+  setTimeout(function(){
+  for (var h = 0; h < 3; h++) {
   var outPutString2 = " "
-  for (var j = 0; j <= 4; j++){
-    outPutString2 += pattern2[h];
-  }
-  console.log(outPutString2);
+    for (var j = 0; j <= 8; j++){
+      outPutString2 += pattern2[h];
+      }
+    console.log(outPutString2);
+    }
+  } 
+
 }
 
-for (var i = 0; i < 3; i++) {
-  var outPutString1 = " "
-  for (var x = 0; x <= 4; x++){
-    outPutString1 += pattern1[i];
-  }
-  console.log(outPutString1);
-}
 
-for (var h = 0; h < 3; h++) {
-  var outPutString2 = " "
-  for (var j = 0; j <= 4; j++){
-    outPutString2 += pattern2[h];
-  }
-  console.log(outPutString2);
-}
-
-for (var i = 0; i < 3; i++) {
-  var outPutString1 = " "
-  for (var x = 0; x <= 4; x++){
-    outPutString1 += pattern1[i];
-  }
-  console.log(outPutString1);
-}
-
-for (var h = 0; h < 3; h++) {
-  var outPutString2 = " "
-  for (var j = 0; j <= 4; j++){
-    outPutString2 += pattern2[h];
-  }
-  console.log(outPutString2);
-}
 
 
 });
