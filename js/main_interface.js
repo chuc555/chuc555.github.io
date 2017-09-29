@@ -4,11 +4,11 @@
 $(window).on('resize', function(event){
 	var windowSize = $(window).width(); // Could've done $(this).width()
     if(windowSize < 485){
-    	$('html').css('background-color', 'red');
+    	$('html').css('background-color', '#F39C82');
     } else if (windowSize > 487){
-    	$('html').css('background-color', 'red');
+    	$('html').css('background-color', '#F39C82');
     } else if(windowSize = 486){
-    	$('html').css('background-color', '#46F124');
+    	$('html').css('background-color', '#C1F382');
     } else {
     	$('html').css('background-color', 'white');
     }
