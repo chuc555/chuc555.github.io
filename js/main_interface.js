@@ -1,4 +1,7 @@
-$(document).ready(function() {
+// $(document).ready(function() {
+
+function animatedConsole(){
+
 
 
 var snowTimer = 0; //declare our timer for setTimeout
@@ -117,19 +120,9 @@ for (var i=0; i<20; i++){
       result7 += '   ■        ■      ■      ■   ■' + newLine;
       result7 += '   ■        ■      ■    ■       ■' + newLine;
       console.log(result7);
-    },a)
-    
+    },a)  
 }
 
+}
 
-
-
-
-
-  //going backwards
-  // for (let starArrayIndex = starArray.length - 1; starArrayIndex >=0; starArrayIndex--) {
-  //   console.log(starArray[starArrayIndex]);
-  // }
-
-
-});
+// });

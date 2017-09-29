@@ -168,13 +168,19 @@ a:hover {
 
 /*PROJECT 4: HIDDEN PATTERN INTERFACE*/
 
-#hiddenpattern_interface {
-	overlow: hidden;
+body.interface {
+	overflow: hidden;
 }
 
 #interface_instruct {
 	font-size: 10px;
-	padding-left: 0px;
+	line-height: 1.5em;
+}
+
+button {
+	color: red;
+	margin-left: 80px;
+	margin-top: 10px;
 }
 
 
