@@ -175,14 +175,37 @@ body.interface {
 #interface_instruct {
 	font-size: 10px;
 	line-height: 1.5em;
+	opacity: 0.2;
 }
 
 button {
-	color: red;
+	color: black;
 	margin-left: 80px;
 	margin-top: 10px;
+	border: none;
+	background-color: #F1F1F1;
 }
 
+.square {
+	color: white;
+	font-size: 4px;
+}
+
+#joke {
+	font-size: 10px;
+	color: black;
+	opacity: 0.8;
+}
+
+#pointer {
+	padding-left: 350px;
+	font-size: 50px;
+	padding-top: 210px;
+}
+
+.derp {
+	background-color: black;
+}
 
 
 
