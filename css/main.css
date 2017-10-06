@@ -52,8 +52,8 @@ p {
 	font-family: 'Roboto Mono', monospace;
 	font-size: 20px;
 	color: black;
-	margin-top: 80px;
-	margin-left: 80px;
+/*	margin-top: 80px;
+	margin-left: 80px;*/
 	text-align: left;
 }
 
@@ -193,6 +193,41 @@ button {
 }
 
 
+/*PROJECT 5: HIDDEN PATTERN REVISIONS*/
+
+#joke_2 {
+	font-family: 'VT323', monospace;
+	font-size: 80px;
+	margin-top: 80px;
+	margin-left: 80px;
+}
+
+#audioButton {
+	font-family: 'VT323', monospace;
+	font-size: 20px;
+	background: #F39C82;
+	border-radius: 4px;
+	color: black;
+	transition: all 0.3s ease 0s;
+}
+
+#audioButton:hover {
+	background: #C2F37F;
+	opactiy: 0.5;
+	transition: all 0.3s ease 0s;
+}
+
+#interface_instruct_2 {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 9.5px;
+	color: white;
+	line-height: 1.5em;
+	position: sticky;
+	bottom: 0;
+	/*background-color: red;*/
+	margin-left: 80px;
+	padding-top:10px;
+}
 
 
 

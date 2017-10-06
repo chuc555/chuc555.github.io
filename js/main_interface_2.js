@@ -7,19 +7,19 @@ $(window).on('resize', function(event){
     } else if (windowSize > 487){
     	$('html').css('background-color', '#F39C82');
     } else if(windowSize = 486){
-    	$('html').css('background-color', '#C1F382');
+    	$('html').css('background-color', '#C2F37F');
     } else {
     	$('html').css('background-color', 'white');
     }
 });
 
 // // AUDIO TRIGGERED BY BUTTON
- $(document).ready(function() {
-var startAudio = new Audio('./sound/Doh_De_Oh.mp3');
-$('#audioButton').click(function (){
-  startAudio.play();
-});
-});
+//  $(document).ready(function() {
+// var startAudio = new Audio('./sound/Doh_De_Oh.mp3');
+// $('#audioButton').click(function (){
+//   startAudio.play();
+// });
+// });
 
 // ANIMATED CONSOLE TRIGGERED BY BUTTON
 function animatedConsole(){
