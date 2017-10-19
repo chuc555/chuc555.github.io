@@ -277,44 +277,52 @@ p.plant_loop {
 	color: black;
 }
 
+#flower {
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	margin: auto;
+}
+
 #plant {
-	width: 80px;
+	width: 8px;
 	min-height: 60px;
 	background-color: #4ADA0B;
 	margin: auto;
+	margin-top: 35px;
 }
 
-/*#wateringCan {
+#wateringCan {
 	width: 80px;
 	height: 80px;
-	background-color: red;
-	top: 10px;
-	margin: auto;
-	margin-bottom:50px;
-}*/
+	margin-left: 50%;
+	margin-top: 155px;
+
+	-ms-transform: rotate(-15deg); /* IE 9 */
+    -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+    transform: rotate(-15deg);
+}
 
 #droplet {
-    background-color: lightblue;
-    width: 90px;
-    height: 90px;
-/*    -webkit-border-top-left-radius: 0;
+    background-color: #59AFFF;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 40px;
+    -webkit-border-top-left-radius: 0;
     -webkit-border-top-right-radius: 65px;
     -webkit-border-bottom-right-radius: 65px;
     -webkit-border-bottom-left-radius: 65px;
-    -webkit-transform:rotate(45deg);*/
+    -webkit-transform:rotate(45deg);
 
     /*display: none;*/
     margin: auto;
-    top: 20px;
+    top: 10px;
 
-}
-
-.plantLoopBg {
-	background-color: #C5F5FF;
 }
 
 body {
 	cursor:url(../img/watering_can.png), default;
+	background: -webkit-linear-gradient(left top, #9CE9FF, #EEFFCF);
 }
 
 
