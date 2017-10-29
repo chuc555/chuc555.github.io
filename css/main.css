@@ -15,22 +15,83 @@ html.indexHtml {
 }
 
 h2.index_title { 
-	font-family: 'Roboto Mono', monospace;
-	font-size: 20px;
-	text-align: left;
+	/*font-family: 'Roboto Mono', monospace;*/
+	font-family: 'Source Code Pro', monospace;
+	font-size: 30px;
 	line-height: 2em;
-	margin-top: 50px;
-	margin-left: 50px;
 	color: #FFEC00;
+}
+
+#title_1 {
+	float: left;
+	margin-left: 30px;
+}
+
+#title_2 { 
+	float: right;
+	margin-right: 30px;
+}
+
+#title_3 {
+	position: absolute;
+	float: left;
+	margin-left: 30px;
+	bottom: 20px;
+}
+
+#title_4 { 
+	float: right;
+	position: absolute;
+	margin-right: 30px;
+	bottom: 20px;
 }
 
 p.index {
 	font-family: 'Roboto Mono', monospace;
 	font-size: 20px;
 	color: white;
-	margin-top: 50px;
+	top: 200px;
 	margin-left: 50px;
 	text-align: left;
+}
+
+#project_1{
+	position: absolute;
+	float: left;
+}
+
+#project_2{
+	position: absolute;
+	left: 500px;
+}
+
+#project_3{
+	position: absolute;
+	right: 200px;
+}
+
+#project_4{
+	position: absolute;
+	top: 200px
+	float: left;
+}
+
+#project_5{
+	position: absolute;
+	top: 100px;
+	left: 500px;
+}
+
+#project_6{
+	position: absolute;
+	top: 100px;
+	right: 200px;
+}
+
+#project_7{
+	position: absolute;
+	top: 500px;
+	left: 200px;
 }
 
 a {
@@ -266,18 +327,18 @@ p.loop_text {
 	margin-left: 30px;
 }
 
-/*PROJECT 6: LOOP LIVE*/
-body {
-	cursor:url(../img/watering_can.png), default;
-	background: -webkit-linear-gradient(left top, #9CE9FF, #EEFFCF);
-}
 
-#flower {
-	width: 20px;
-	height: 20px;
-	background-color: red;
-	margin: auto;
-	margin-bottom: 0px;
+/*PROJECT 6: PLANT LOOP*/
+
+body.plantLoopBg {
+	background: -webkit-linear-gradient(left top, #9CE9FF, #EEFFCF);
+
+	cursor: url(../img/watering_can.png) 10 0, auto;
+    cursor: url('./img/watering_can.png') 10 0, auto;
+    cursor: -webkit-image-set(
+    url('./img/watering_can.png') 1x,
+    url('../img/watering_can.png') 2x
+  ) 10 0, auto;
 }
 
 #plant {
@@ -290,7 +351,7 @@ body {
 	margin-left: 50%;
 }
 
-#wateringCan {
+/*#wateringCan {
 	width: 80px;
 	height: 80px;
 	margin-left: 50%;
@@ -299,19 +360,43 @@ body {
 	-ms-transform: rotate(-15deg); /* IE 9 */
     -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
     transform: rotate(-15deg);
-}
+}*/
 
 #leaf_01 {
 	width: 20px;
 	height: 20px;
-	/*margin-right: 50px;*/
-	bottom:0;
+	margin-left: 50.5%;
+	margin-top: 150px;
 }
+
+#leaf_02 {
+	width: 20px;
+	height: 20px;
+	margin-left: 48%;
+	margin-top: -150px;
+}
+
+#leaf_03 {
+	width: 20px;
+	height: 20px;
+	margin-top: -190px;
+}
+
+#leaf_04 {
+	width: 20px;
+	height: 20px;
+	margin-left: 50.5%;
+	margin-top: -180px;
+	/*margin-left: 50.5%;
+	margin-top: -90px;*/
+}
+
 
 #droplet {
     background-color: #59AFFF;
     width: 35px;
     height: 35px;
+    position: absolute;
     margin-bottom: 40px;
     -webkit-border-top-left-radius: 0;
     -webkit-border-top-right-radius: 65px;
