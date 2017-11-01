@@ -17,10 +17,10 @@ h2.title {
 	/*font-family: 'EB Garamond', serif;*/
 	font-family: 'Cormorant Garamond', serif;
 	font-weight: 500;
-	font-size: 37px;
+	font-size: 26px;
 	line-height: 1.6em;
 	color: black;
-	width: 650px;
+	width: 450px;
 	margin-top: 50px;
 	text-align: left;
 }
@@ -41,19 +41,23 @@ a:hover {
     -webkit-stroke-width: 5.5px;
     -webkit-stroke-color: #FFFFFF;
     -webkit-fill-color: #FFFFFF;
-    text-shadow: 1px 0px 20px #FF5A32;
+    text-shadow: 1px 0px 15px #00FFBA;
+    cursor: crosshair;
 }
 
 .class_site img {display: none;}
-.class_site:hover img {display: block; position: absolute; left: 40px; top: 210px;}
+.class_site:hover img {display: block; position: absolute; left: 40px; top: 140px; height: 320px;}
 
 .project_01 img {display: none;}
-.project_01:hover img {display: block; position: absolute; left: 40px; top: 210px;}
+.project_01:hover img {display: block; position: absolute; left: 40px; top: 140px; height: 320px;}
 
 .project_02 img {display: none;}
-.project_02:hover img {display: block; position: absolute; left: 40px; top: 210px;}
+.project_02:hover img {display: block; position: absolute; left: 40px; top: 140px; height: 320px;}
 
 .loop_sketches img {display: none;}
-.loop_sketches:hover img {display: block; position: absolute; left: 40px; top: 210px;}
+.loop_sketches:hover img {display: block; position: absolute; left: 40px; top: 140px; height: 320px;}
+
+.project_04 img {display: none;}
+.project_04:hover img {display: block; position: absolute; left: 40px; top: 140px; height: 320px;}
 
 
