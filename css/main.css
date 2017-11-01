@@ -1,116 +1,6 @@
 html, body { width: 100%; height: 100%; }
 
 
-
-/*INDEX PAGE*/
-html.indexHtml {
-    height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat:no-repeat;
-  /*	background: -webkit-linear-gradient(#FFA194, #FFFFFF);*/
-  	background-color: #2452F1;
-}
-
-h2.index_title { 
-	/*font-family: 'Roboto Mono', monospace;*/
-	font-family: 'Source Code Pro', monospace;
-	font-size: 30px;
-	line-height: 2em;
-	color: #FFEC00;
-}
-
-#title_1 {
-	float: left;
-	margin-left: 30px;
-}
-
-#title_2 { 
-	float: right;
-	margin-right: 30px;
-}
-
-#title_3 {
-	position: absolute;
-	float: left;
-	margin-left: 30px;
-	bottom: 20px;
-}
-
-#title_4 { 
-	float: right;
-	position: absolute;
-	margin-right: 30px;
-	bottom: 20px;
-}
-
-p.index {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 20px;
-	color: white;
-	top: 200px;
-	margin-left: 50px;
-	text-align: left;
-}
-
-#project_1{
-	position: absolute;
-	float: left;
-}
-
-#project_2{
-	position: absolute;
-	left: 500px;
-}
-
-#project_3{
-	position: absolute;
-	right: 200px;
-}
-
-#project_4{
-	position: absolute;
-	top: 200px
-	float: left;
-}
-
-#project_5{
-	position: absolute;
-	top: 100px;
-	left: 500px;
-}
-
-#project_6{
-	position: absolute;
-	top: 100px;
-	right: 200px;
-}
-
-#project_7{
-	position: absolute;
-	top: 500px;
-	left: 200px;
-}
-
-a {
-	color: white;
-}
-
-a:hover {
-    color: #FF6767;
-    cursor: help;
-}
-
-#index_body {
-	overflow: hidden;
-}
-
-
-
-
-
 /*PROJECT 1: HELLO WORLD*/
 
 p {
@@ -215,6 +105,7 @@ p {
 	line-height: 2em;
 	margin-top: 80px;
 }
+
 
 /*PROJECT 4: HIDDEN PATTERN INTERFACE*/
 
