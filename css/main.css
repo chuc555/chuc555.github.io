@@ -236,10 +236,70 @@ body.plantLoopBg {
 	position: absolute;
 	bottom: 0;
 	width: 8px;
-	min-height: 40px;
+	min-height: 10px;
 	background-color: #4ADA0B;
 	margin-top: 35px;
 	margin-left: 50%;
+}
+
+#plant_02 {
+	position: absolute;
+	bottom: 0;
+	width: 8px;
+	min-height: 10px;
+	background-color: #4ADA0B;
+	margin-top: 35px;
+	margin-left: 8%;
+}
+
+#plant_03 {
+	position: absolute;
+	bottom: 0;
+	width: 8px;
+	min-height: 10px;
+	background-color: #4ADA0B;
+	margin-top: 35px;
+	margin-left: 20%;
+}
+
+#plant_04 {
+	position: absolute;
+	bottom: 0;
+	width: 8px;
+	min-height: 10px;
+	background-color: #4ADA0B;
+	margin-top: 35px;
+	margin-left: 35%;
+}
+
+#plant_05 {
+	position: absolute;
+	bottom: 0;
+	width: 8px;
+	min-height: 10px;
+	background-color: #4ADA0B;
+	margin-top: 35px;
+	margin-left: 65%;
+}
+
+#plant_06 {
+	position: absolute;
+	bottom: 0;
+	width: 8px;
+	min-height: 10px;
+	background-color: #4ADA0B;
+	margin-top: 35px;
+	margin-left: 79%;
+}
+
+#plant_07 {
+	position: absolute;
+	bottom: 0;
+	width: 8px;
+	min-height: 10px;
+	background-color: #4ADA0B;
+	margin-top: 35px;
+	margin-left: 91%;
 }
 
 /*#wateringCan {
@@ -281,7 +341,6 @@ body.plantLoopBg {
 	/*margin-left: 50.5%;
 	margin-top: -90px;*/
 }
-
 
 #droplet {
     background-color: #59AFFF;
