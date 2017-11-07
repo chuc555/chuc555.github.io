@@ -21,7 +21,7 @@ h2.title {
 	line-height: 1.6em;
 	color: black;
 	width: 450px;
-	margin-top: 50px;
+	margin-top: 40px;
 	text-align: left;
 }
 
@@ -65,5 +65,8 @@ a:hover {
 
 .loop_plant_1 img {display: none;}
 .loop_plant_1:hover img {display: block; position: absolute; left: 40px; top: 140px; height: 320px;}
+
+.responsive img {display: none;}
+.responsive:hover img {display: block; position: absolute; left: 40px; top: 140px; height: 320px;}
 
 

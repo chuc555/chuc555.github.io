@@ -77,11 +77,19 @@ $(document).ready(function() {
 		}
 
 	var currentHeight = $('#plant_06').css("height")
-	console.log(currentHeight);	
+	console.log("currentHeight: ", currentHeight);	
 
-	Cookies.set('plantState', currentHeight, {expires: 10});
+
+
+	Cookies.set('plantState',currentHeight, {expires: 10});
 	
+	var currentCookieValue = Cookies.get('plantState')
+	console.log("currentCookieValue",currentCookieValue)
 	}); 
+
+var newFunction = function(){
+
+}
 
 
 
