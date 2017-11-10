@@ -29,7 +29,7 @@ $(document).ready(function() {
 			$(this).height(plantHeight)
 
 			// if you decide to show leaves based on plant height:
-			if(plantHeight > 30){
+			if(savedHeights > 30){
 				$('#p1_leaf_01').show();
 				$('#p1_leaf_02').show();
 				$('#p1_leaf_03').show();
