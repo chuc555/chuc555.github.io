@@ -1,61 +1,232 @@
 $(document).ready(function() {
-	console.log("let's party.");
+
+	var plantHt_01 = $('#plant_01').height(),
+		plantHt_02 = $('#plant_02').height(),
+		plantHt_03 = $('#plant_03').height(),
+		plantHt_04 = $('#plant_04').height(),
+		plantHt_05 = $('#plant_05').height(),
+		plantHt_06 = $('#plant_06').height(),
+		plantHt_07 = $('#plant_07').height();
+
+	var heights = [plantHt_01, plantHt_02, plantHt_03, plantHt_04, plantHt_05, plantHt_06, plantHt_07];
+	var start = [0,0,0,0,0,0,0];
+
+	$('#p1_leaf_01').hide();
+	$('#p1_leaf_02').hide();
+	$('#p1_leaf_03').hide();
+	$('#p1_leaf_04').hide();
+
+	$('#p2_leaf_01').hide();
+	$('#p2_leaf_02').hide();
+	$('#p2_leaf_03').hide();
+	$('#p2_leaf_04').hide();
+	$('#p2_leaf_05').hide();
+	$('#p2_leaf_06').hide();
+	$('#p2_leaf_07').hide();
+	$('#p2_leaf_08').hide();
+
+	$('#p3_leaf_01').hide();
+	$('#p3_leaf_02').hide();
+	$('#p3_leaf_03').hide();
+	$('#p3_leaf_04').hide();
+
+	$('#p4_leaf_01').hide();
+	$('#p4_leaf_02').hide();
+	$('#p4_leaf_03').hide();
+	$('#p4_leaf_04').hide();
+
+	$('#p7_leaf_01').hide();
+	$('#p7_leaf_02').hide();
+	$('#p7_leaf_03').hide();
+	$('#p7_leaf_04').hide();
+
+	// if the cookie exists: 
+	if(Cookies.getJSON('allPlantHeights')){
+		// get cookie information
+		var savedHeights = Cookies.getJSON('allPlantHeights')
+		
+		// space to update each height in the array
+		// use the 'each' function for plants to declare their new height
+
+		console.log(savedHeights); //prints out the array of heights last left off
+
+		$(".plants").each(function(){
+			var plantIndex = $(".plants").index(this);
+			var plantHeight = savedHeights[plantIndex];
+
+			$(this).height(plantHeight)
+
+			// if you decide to show leaves based on plant height:
+
+			if(plantHeight > 30){
+				$('#p1_leaf_01').show();
+				$('#p1_leaf_02').show();
+				$('#p1_leaf_03').show();
+				$('#p1_leaf_04').show();
+
+				$('#p2_leaf_01').show();
+				$('#p2_leaf_02').show();
+				$('#p2_leaf_03').show();
+				$('#p2_leaf_04').show();
+				$('#p2_leaf_05').show();
+				$('#p2_leaf_06').show();
+				$('#p2_leaf_07').show();
+				$('#p2_leaf_08').show();
+
+				$('#p3_leaf_01').show();
+				$('#p3_leaf_02').show();
+				$('#p3_leaf_03').show();
+				$('#p3_leaf_04').show();
+
+				$('#p4_leaf_01').show();
+				$('#p4_leaf_02').show();
+				$('#p4_leaf_03').show();
+				$('#p4_leaf_04').show();
+
+				$('#p7_leaf_01').show();
+				$('#p7_leaf_02').show();
+				$('#p7_leaf_03').show();
+				$('#p7_leaf_04').show();
+
+			} else if (plantHeight > 50){
+				// note: p2_leaves 5-8 don't show when they're placed here? for now i'm putting them when plant height is greater than 30
+
+			} else if (plantHeight > 70) {
+				
+				
+			} else if ((plantHeight > 90) && (plantHeight < 500)) {
+				
+								
+			}
+		});
+
+		Cookies.set('allPlantHeights',savedHeights, {expires: 10});
 	
-	$('#leaf_01').hide();
-	$('#leaf_02').hide();
-	$('#leaf_03').hide();
-	$('#leaf_04').hide();
+	} else { //if doesn't exist, set the cookie
+		Cookies.set('allPlantHeights',start, {expires: 10});
+	};
+
+
+	// cookie for one plant:
+	// if(Cookies.get('plantState')){
+	// 		var currentCookieValue = Cookies.get('plantState')
+	// 		console.log("currentCookieValue",currentCookieValue)
+
+	// 		$('#plant_06').height(currentCookieValue);
+
+	// } else {
+	// 		Cookies.set('plantState',0, {expires: 10});
+	// };
+	
+
+	// hide leaves at first, start counter at 0
 
 	var counter = 0;
-
-	$(".plantLoopBg").click(function() {
+	
+	// leaves appear with click
+	$(document).click(function(e) {
+		var xValue = e.pageX
 		console.log(counter++);
-		if (counter == 10) {
-			$('#plant').css('max-height','150px');
-			$('#leaf_01').show();
-		} else if (counter == 12) {
-			$('#leaf_02').show();
-		} else if (counter == 14) {
-			$('#leaf_03').show();
-		} else if (counter == 18) {
-			$('#leaf_04').show();
-		};
-	}); // end of function
- 	
 
+		var plantHeight = $(".plants").height();
+
+		//leaves for plant_01
+		if ((plantHeight > 29) && (plantHeight < 49) && (xValue > 0) && (xValue <200)) {
+			$('#p1_leaf_01').show();
+		} else if ((plantHeight > 49) && (plantHeight < 69) && (xValue > 0) && (xValue <200)) {
+			$('#p1_leaf_03').show();
+		} else if ((plantHeight > 69) && (plantHeight < 89) && (xValue > 0) && (xValue <200)) {
+			$('#p1_leaf_02').show();
+		} else if ((plantHeight > 89) && (plantHeight < 121) && (xValue > 0) && (xValue <200)) {
+			$('#p1_leaf_04').show();
+		};
+
+		//leaves for plant_02
+		if ((counter == 3) && (xValue > 201) && (xValue <400)) {
+			$('#p2_leaf_01').show();
+		} else if ((counter == 5) && (xValue > 201) && (xValue <400)) {
+			$('#p2_leaf_03').show();
+		} else if ((counter == 7) && (xValue > 201) && (xValue <400)) {
+			$('#p2_leaf_02').show();
+		} else if ((counter == 9) && (xValue > 201) && (xValue <400)) {
+			$('#p2_leaf_04').show();
+		} else if ((counter == 12) && (xValue > 201) && (xValue <400)) {
+			$('#p2_leaf_05').show();
+		};
+
+		//leaves for plant_03
+		if ((counter == 3) && (xValue > 401) && (xValue <600)) {
+			$('#p3_leaf_01').show();
+		} else if ((counter == 5) && (xValue > 401) && (xValue <600)) {
+			$('#p3_leaf_03').show();
+		} else if ((counter == 7) && (xValue > 401) && (xValue <600)) {
+			$('#p3_leaf_02').show();
+		} else if ((counter == 9) && (xValue > 401) && (xValue <600)) {
+			$('#p3_leaf_04').show();
+		} else if ((counter == 12) && (xValue > 401) && (xValue <600)) {
+			$('#p3_leaf_05').show();
+		};
+
+		//leaves for plant_04
+		if ((counter == 3) && (xValue > 601) && (xValue <800)) {
+			$('#p4_leaf_01').show();
+		} else if ((counter == 5) && (xValue > 601) && (xValue <800)) {
+			$('#p4_leaf_03').show();
+		} else if ((counter == 7) && (xValue > 601) && (xValue <800)) {
+			$('#p4_leaf_02').show();
+		} else if ((counter == 9) && (xValue > 601) && (xValue <800)) {
+			$('#p4_leaf_04').show();
+		};
+
+		//leaves for plant_07
+		if ((plantHeight > 29) && (plantHeight < 49) && (xValue > 1101) && (xValue <1300)) {
+			$('#p7_leaf_01').show();
+		} else if ((plantHeight > 49) && (plantHeight < 69) && (xValue > 1101) && (xValue <1300)) {
+			$('#p7_leaf_03').show();
+		} else if ((plantHeight > 69) && (plantHeight < 89) && (xValue > 1101) && (xValue <1300)) {
+			$('#p7_leaf_02').show();
+		} else if ((plantHeight > 89) && (plantHeight < 121) && (xValue > 1101) && (xValue <1300)) {
+			$('#p7_leaf_04').show();
+		};
+
+
+	}); // end of function
+
+ 	
+ 	// increasing plant height with click
 	$(document).click(function(e){ 
 	 	var xValue = e.pageX
  		var yValue = e.pageY 
 			console.log(xValue +', '+ yValue); 
 		var windowHeight = $(window).height()
-			console.log(windowHeight)
+			// console.log(windowHeight)
 
 		TweenMax.fromTo('#droplet',1.0, 
 			{opacity: 1, top: yValue + 45, scale: 0.5, left: xValue - 27}, 
 			{opacity: 0, top: windowHeight - 80, scale: 1.5, left: xValue - 27});
 
 		if ((xValue > 0) && (xValue < 200)) {
+			var plantHeight_01 = $('#plant_01').height();
+			var newHeight_01 = plantHeight_01 + 10
+			$('#plant_01').delay(1000).css('min-height',newHeight_01+'px');
+		}
+
+		if ((xValue > 201) && (xValue <400)) {
 			var plantHeight_02 = $('#plant_02').height();
 			var newHeight_02 = plantHeight_02 + 10;
 			$('#plant_02').delay(1000).css('min-height',newHeight_02+'px');
 		}
 
-		if ((xValue > 201) && (xValue <400)) {
+		if ((xValue > 401) && (xValue <600)) {
 			var plantHeight_03 = $('#plant_03').height();
 			var newHeight_03 = plantHeight_03 + 10;
-			$('#plant_03').delay(1000).css('min-height',newHeight_03+'px');
-		}
-
-		if ((xValue > 401) && (xValue <600)) {
-			var plantHeight_04 = $('#plant_04').height();
-			var newHeight_04 = plantHeight_04 + 10;
-			$('#plant_04').delay(1000).css('min-height',newHeight_04+'px');
+			$('#plant_03').delay(1000).css('min-height',newHeight_03 +'px');
 		}
 
 		if ((xValue > 601) && (xValue <800)) {
-			var plantHeight = $('#plant').height();
-			var newHeight = plantHeight + 10;
-			$('#plant').delay(1000).css('min-height',newHeight+'px');	
+			var plantHeight_04 = $('#plant_04').height();
+			var newHeight_04 = plantHeight_04 + 10;
+			$('#plant_04').delay(1000).css('min-height',newHeight_04+'px');	
 		}
 
 		if ((xValue > 801) && (xValue <970)) {
@@ -76,20 +247,54 @@ $(document).ready(function() {
 			$('#plant_07').delay(1000).css('min-height',newHeight_07+'px');	
 		}
 
-	var currentHeight = $('#plant_06').css("height")
-	console.log("currentHeight: ", currentHeight);	
+		// Stuff for updating cookie for one plant on each click:
+		// putting plant height into a variable
+		// var currentHeight = $('#plant_06').height()
+		// console.log("currentHeight: ", currentHeight);	
 
-
-
-	Cookies.set('plantState',currentHeight, {expires: 10});
+		// cookie set
+		// Cookies.set('plantState',currentHeight, {expires: 10});
 	
-	var currentCookieValue = Cookies.get('plantState')
-	console.log("currentCookieValue",currentCookieValue)
-	}); 
+		// cookie read
+		// var currentCookieValue = Cookies.get('plantState')
+		// console.log("currentCookieValue",currentCookieValue)
 
-var newFunction = function(){
 
-}
+
+
+
+		// Stuff for updating cookie on each click:
+		// updating variables
+		plantHt_01 = $('#plant_01').height(),
+		plantHt_02 = $('#plant_02').height(),
+		plantHt_03 = $('#plant_03').height(),
+		plantHt_04 = $('#plant_04').height(),
+		plantHt_05 = $('#plant_05').height(),
+		plantHt_06 = $('#plant_06').height(),
+		plantHt_07 = $('#plant_07').height();
+
+		// updating array
+		heights = [plantHt_01, plantHt_02, plantHt_03, plantHt_04, plantHt_05, plantHt_06, plantHt_07];
+
+		var updatedHeights = [];
+		$(".plants").each(function(){
+			var plantsHeights = $(this).height()
+			updatedHeights.push(plantsHeights);
+		})
+
+		// updating cookie with the new array
+		Cookies.set('allPlantHeights', updatedHeights, {expires: 10})
+		
+		// get cookie info
+		var currentHeightValues = Cookies.getJSON('allPlantHeights')
+		console.log('currentHeightValues', currentHeightValues)
+
+
+
+	}); // end of click function
+		
+
+
 
 
 

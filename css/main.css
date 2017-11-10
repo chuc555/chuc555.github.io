@@ -223,7 +223,6 @@ p.loop_text {
 
 body.plantLoopBg {
 	background: -webkit-linear-gradient(left top, #9CE9FF, #EEFFCF);
-
 	cursor: url(../img/watering_can.png) 10 0, auto;
     cursor: url('./img/watering_can.png') 10 0, auto;
     cursor: -webkit-image-set(
@@ -232,122 +231,14 @@ body.plantLoopBg {
   ) 10 0, auto;
 }
 
-#plant {
-	position: absolute;
-	bottom: 0;
-	width: 8px;
-	min-height: 10px;
-	background-color: #4ADA0B;
-	margin-top: 35px;
-	margin-left: 50%;
-}
-
-#plant_02 {
-	position: absolute;
-	bottom: 0;
-	width: 8px;
-	min-height: 10px;
-	background-color: #4ADA0B;
-	margin-top: 35px;
-	margin-left: 8%;
-}
-
-#plant_03 {
-	position: absolute;
-	bottom: 0;
-	width: 8px;
-	min-height: 10px;
-	background-color: #4ADA0B;
-	margin-top: 35px;
-	margin-left: 20%;
-}
-
-#plant_04 {
-	position: absolute;
-	bottom: 0;
-	width: 8px;
-	min-height: 10px;
-	background-color: #4ADA0B;
-	margin-top: 35px;
-	margin-left: 35%;
-}
-
-#plant_05 {
-	position: absolute;
-	bottom: 0;
-	width: 8px;
-	min-height: 10px;
-	background-color: #4ADA0B;
-	margin-top: 35px;
-	margin-left: 65%;
-}
-
-#plant_06 {
-	position: absolute;
-	bottom: 0;
-	width: 8px;
-	min-height: 10px;
-	background-color: #4ADA0B;
-	margin-top: 35px;
-	margin-left: 79%;
-}
-
-#plant_07 {
-	position: absolute;
-	bottom: 0;
-	width: 8px;
-	min-height: 10px;
-	background-color: #4ADA0B;
-	margin-top: 35px;
-	margin-left: 91%;
-}
-
-/*#wateringCan {
-	width: 80px;
-	height: 80px;
-	margin-left: 50%;
-	margin-top: 300px;
-
-	-ms-transform: rotate(-15deg); /* IE 9 */
-    -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
-    transform: rotate(-15deg);
-}*/
-
-#leaf_01 {
-	width: 20px;
-	height: 20px;
-	margin-left: 50.5%;
-	margin-top: 150px;
-}
-
-#leaf_02 {
-	width: 20px;
-	height: 20px;
-	margin-left: 48%;
-	margin-top: -150px;
-}
-
-#leaf_03 {
-	width: 20px;
-	height: 20px;
-	margin-top: -190px;
-}
-
-#leaf_04 {
-	width: 20px;
-	height: 20px;
-	margin-left: 50.5%;
-	margin-top: -180px;
-	/*margin-left: 50.5%;
-	margin-top: -90px;*/
-}
-
 #droplet {
     background-color: #59AFFF;
     width: 35px;
     height: 35px;
+    opacity: 0.75;
     position: absolute;
     margin-bottom: 40px;
+
     -webkit-border-top-left-radius: 0;
     -webkit-border-top-right-radius: 65px;
     -webkit-border-bottom-right-radius: 65px;
@@ -357,6 +248,91 @@ body.plantLoopBg {
     margin: auto;
     top: 10px;
 }
+
+/******************PLANT STEMS******************/
+.plants {
+	position: absolute;
+	bottom: 0;
+	width: 8px;
+	min-height: 10px;
+	background-color: #4ADA0B;
+	margin-top: 35px;
+}
+
+#plant_01 {
+	margin-left: 8%;
+}
+
+#plant_02 {
+	margin-left: 20%;
+}
+
+#plant_03 {
+	margin-left: 35%;
+}
+
+#plant_04 {
+	margin-left: 50%;
+}
+
+#plant_05 {
+	margin-left: 65%;
+}
+
+#plant_06 {
+	margin-left: 80%;
+}
+
+#plant_07 {
+	margin-left: 90%;
+}
+
+
+/******************LEAVES******************/
+.leaves {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+}
+
+/*for plant_01*/
+#p1_leaf_01 { left: 85px; bottom: 20px;}
+#p1_leaf_02 { left: 85px; bottom: 60px;}
+#p1_leaf_03 { left: 110px; bottom: 40px;}
+#p1_leaf_04 { left: 110px; bottom: 80px;}
+
+/*for plant_02*/
+#p2_leaf_01 { left: 240px; bottom: 20px;}
+#p2_leaf_02 { left: 240px; bottom: 60px;}
+#p2_leaf_03 { left: 265px; bottom: 40px;}
+#p2_leaf_04 { left: 265px; bottom: 80px;}
+#p2_leaf_05 { left: 240px; bottom: 100px;}
+#p2_leaf_06 { left: 240px; bottom: 160px;}
+#p2_leaf_07 { left: 265px; bottom: 140px;}
+#p2_leaf_08 { left: 265px; bottom: 200px;}
+
+/*for plant_03*/
+#p3_leaf_01 { left: 430px; bottom: 20px;}
+#p3_leaf_02 { left: 430px; bottom: 60px;}
+#p3_leaf_03 { left: 455px; bottom: 40px;}
+#p3_leaf_04 { left: 455px; bottom: 80px;}
+
+/*for plant_04*/
+#p4_leaf_01 { left: 625px; bottom: 20px;}
+#p4_leaf_02 { left: 625px; bottom: 60px;}
+#p4_leaf_03 { left: 647px; bottom: 40px;}
+#p4_leaf_04 { left: 647px; bottom: 80px;}
+
+/*for plant_07*/
+#p7_leaf_01 { left: 1135px; bottom: 20px;}
+#p7_leaf_02 { left: 1135px; bottom: 60px;}
+#p7_leaf_03 { left: 1158px; bottom: 40px;}
+#p7_leaf_04 { left: 1158px; bottom: 80px;}
+
+
+
+
+
 
 
 
