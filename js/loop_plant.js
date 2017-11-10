@@ -11,45 +11,17 @@ $(document).ready(function() {
 	var heights = [plantHt_01, plantHt_02, plantHt_03, plantHt_04, plantHt_05, plantHt_06, plantHt_07];
 	var start = [0,0,0,0,0,0,0];
 
-	$('#p1_leaf_01').hide();
-	$('#p1_leaf_02').hide();
-	$('#p1_leaf_03').hide();
-	$('#p1_leaf_04').hide();
+	$('.leaves').hide();
+	$('#bloom_01').hide();
 
-	$('#p2_leaf_01').hide();
-	$('#p2_leaf_02').hide();
-	$('#p2_leaf_03').hide();
-	$('#p2_leaf_04').hide();
-	$('#p2_leaf_05').hide();
-	$('#p2_leaf_06').hide();
-	$('#p2_leaf_07').hide();
-	$('#p2_leaf_08').hide();
-
-	$('#p3_leaf_01').hide();
-	$('#p3_leaf_02').hide();
-	$('#p3_leaf_03').hide();
-	$('#p3_leaf_04').hide();
-
-	$('#p4_leaf_01').hide();
-	$('#p4_leaf_02').hide();
-	$('#p4_leaf_03').hide();
-	$('#p4_leaf_04').hide();
-
-	$('#p7_leaf_01').hide();
-	$('#p7_leaf_02').hide();
-	$('#p7_leaf_03').hide();
-	$('#p7_leaf_04').hide();
-
-	// if the cookie exists: 
-	if(Cookies.getJSON('allPlantHeights')){
+	// ====================== checking for the cookie ====================== 
+	if (Cookies.getJSON('allPlantHeights')){
 		// get cookie information
 		var savedHeights = Cookies.getJSON('allPlantHeights')
-		
-		// space to update each height in the array
-		// use the 'each' function for plants to declare their new height
-
 		console.log(savedHeights); //prints out the array of heights last left off
 
+		// space to update each height in the array
+		// use the 'each' function for plants to declare their new height
 		$(".plants").each(function(){
 			var plantIndex = $(".plants").index(this);
 			var plantHeight = savedHeights[plantIndex];
@@ -57,7 +29,6 @@ $(document).ready(function() {
 			$(this).height(plantHeight)
 
 			// if you decide to show leaves based on plant height:
-
 			if(plantHeight > 30){
 				$('#p1_leaf_01').show();
 				$('#p1_leaf_02').show();
@@ -83,10 +54,23 @@ $(document).ready(function() {
 				$('#p4_leaf_03').show();
 				$('#p4_leaf_04').show();
 
+				$('#p5_leaf_01').show();
+				$('#p5_leaf_02').show();
+				$('#p5_leaf_03').show();
+				$('#p5_leaf_04').show();
+				$('#p5_leaf_05').show();
+
+				$('#p6_leaf_01').show();
+				$('#p6_leaf_02').show();
+				$('#p6_leaf_03').show();
+				$('#p6_leaf_04').show();
+				$('#p6_leaf_05').show();
+
 				$('#p7_leaf_01').show();
 				$('#p7_leaf_02').show();
 				$('#p7_leaf_03').show();
 				$('#p7_leaf_04').show();
+				$('#p7_leaf_05').show();
 
 			} else if (plantHeight > 50){
 				// note: p2_leaves 5-8 don't show when they're placed here? for now i'm putting them when plant height is greater than 30
@@ -97,7 +81,7 @@ $(document).ready(function() {
 			} else if ((plantHeight > 90) && (plantHeight < 500)) {
 				
 								
-			}
+			};
 		});
 
 		Cookies.set('allPlantHeights',savedHeights, {expires: 10});
@@ -119,18 +103,19 @@ $(document).ready(function() {
 	// };
 	
 
-	// hide leaves at first, start counter at 0
-
+	// hide items at first, start counter at 0
 	var counter = 0;
 	
-	// leaves appear with click
+	// ====================== plant leaves appear with click ======================
 	$(document).click(function(e) {
 		var xValue = e.pageX
 		console.log(counter++);
 
 		var plantHeight = $(".plants").height();
+		var plantHeight_06 = $("#plant_06").height();
+		console.log("THIS IS HEIGHT" + plantHeight);
 
-		//leaves for plant_01
+		//====== leaves for plant_01 ======
 		if ((plantHeight > 29) && (plantHeight < 49) && (xValue > 0) && (xValue <200)) {
 			$('#p1_leaf_01').show();
 		} else if ((plantHeight > 49) && (plantHeight < 69) && (xValue > 0) && (xValue <200)) {
@@ -141,7 +126,7 @@ $(document).ready(function() {
 			$('#p1_leaf_04').show();
 		};
 
-		//leaves for plant_02
+		//====== leaves for plant_02 ======
 		if ((counter == 3) && (xValue > 201) && (xValue <400)) {
 			$('#p2_leaf_01').show();
 		} else if ((counter == 5) && (xValue > 201) && (xValue <400)) {
@@ -154,7 +139,7 @@ $(document).ready(function() {
 			$('#p2_leaf_05').show();
 		};
 
-		//leaves for plant_03
+		//====== leaves for plant_03 ======
 		if ((counter == 3) && (xValue > 401) && (xValue <600)) {
 			$('#p3_leaf_01').show();
 		} else if ((counter == 5) && (xValue > 401) && (xValue <600)) {
@@ -167,7 +152,7 @@ $(document).ready(function() {
 			$('#p3_leaf_05').show();
 		};
 
-		//leaves for plant_04
+		//====== leaves for plant_04 ======
 		if ((counter == 3) && (xValue > 601) && (xValue <800)) {
 			$('#p4_leaf_01').show();
 		} else if ((counter == 5) && (xValue > 601) && (xValue <800)) {
@@ -178,22 +163,52 @@ $(document).ready(function() {
 			$('#p4_leaf_04').show();
 		};
 
-		//leaves for plant_07
+		//====== leaves for plant_05 ======
+		if ((plantHeight > 29) && (plantHeight < 49) && (xValue > 801) && (xValue <970)) {
+			$('#p5_leaf_01').show();
+		} else if ((plantHeight > 49) && (plantHeight < 69) && (xValue > 801) && (xValue <970)) {
+			$('#p5_leaf_03').show();
+		} else if ((plantHeight > 69) && (plantHeight < 89) && (xValue > 801) && (xValue <970)) {
+			$('#p5_leaf_02').show();
+		} else if ((plantHeight > 89) && (plantHeight < 119) && (xValue > 801) && (xValue <970)) {
+			$('#p5_leaf_04').show();
+		} else if ((plantHeight > 119) && (plantHeight < 151) && (xValue > 801) && (xValue <970)) {
+			$('#p5_leaf_05').show();
+		};
+
+		//====== leaves for plant_06 ======
+		if ((plantHeight > 29) && (plantHeight < 49) && (xValue > 801) && (xValue <970)) {
+			$('#p6_leaf_01').show();
+		} else if ((plantHeight > 49) && (plantHeight < 69) && (xValue > 801) && (xValue <970)) {
+			$('#p6_leaf_03').show();
+		} else if ((plantHeight > 69) && (plantHeight < 89) && (xValue > 801) && (xValue <970)) {
+			$('#p6_leaf_02').show();
+		} else if ((plantHeight > 89) && (plantHeight < 119) && (xValue > 801) && (xValue <970)) {
+			$('#p6_leaf_04').show();
+		} else if ((plantHeight > 119) && (plantHeight < 200) && (xValue > 801) && (xValue <970)) {
+			$('#p6_leaf_05').show();
+		} else if ((plantHeight_06  > 250) && (plantHeight_06  < 400) && (xValue > 801) && (xValue <970)) {
+			$('#bloom_01').show();
+		};
+		// console.log('PLANT 6 ' + plantHeight_06);
+
+		//====== leaves for plant_07 ======
 		if ((plantHeight > 29) && (plantHeight < 49) && (xValue > 1101) && (xValue <1300)) {
 			$('#p7_leaf_01').show();
 		} else if ((plantHeight > 49) && (plantHeight < 69) && (xValue > 1101) && (xValue <1300)) {
 			$('#p7_leaf_03').show();
 		} else if ((plantHeight > 69) && (plantHeight < 89) && (xValue > 1101) && (xValue <1300)) {
 			$('#p7_leaf_02').show();
-		} else if ((plantHeight > 89) && (plantHeight < 121) && (xValue > 1101) && (xValue <1300)) {
+		} else if ((plantHeight > 89) && (plantHeight < 119) && (xValue > 1101) && (xValue <1300)) {
 			$('#p7_leaf_04').show();
+		} else if ((plantHeight > 119) && (plantHeight < 151) && (xValue > 1101) && (xValue <1300)) {
+			$('#p7_leaf_05').show();
 		};
 
-
-	}); // end of function
+	}); // end of click function
 
  	
- 	// increasing plant height with click
+ 	// ====================== increasing plant stem height with click ======================
 	$(document).click(function(e){ 
 	 	var xValue = e.pageX
  		var yValue = e.pageY 
@@ -247,6 +262,8 @@ $(document).ready(function() {
 			$('#plant_07').delay(1000).css('min-height',newHeight_07+'px');	
 		}
 
+
+
 		// Stuff for updating cookie for one plant on each click:
 		// putting plant height into a variable
 		// var currentHeight = $('#plant_06').height()
@@ -258,8 +275,6 @@ $(document).ready(function() {
 		// cookie read
 		// var currentCookieValue = Cookies.get('plantState')
 		// console.log("currentCookieValue",currentCookieValue)
-
-
 
 
 
@@ -288,8 +303,6 @@ $(document).ready(function() {
 		// get cookie info
 		var currentHeightValues = Cookies.getJSON('allPlantHeights')
 		console.log('currentHeightValues', currentHeightValues)
-
-
 
 	}); // end of click function
 		

@@ -249,7 +249,7 @@ body.plantLoopBg {
     top: 10px;
 }
 
-/******************PLANT STEMS******************/
+/*================= PLANT STEMS =================*/
 .plants {
 	position: absolute;
 	bottom: 0;
@@ -288,7 +288,7 @@ body.plantLoopBg {
 }
 
 
-/******************LEAVES******************/
+/*================= LEAVES =================*/
 .leaves {
 	position: absolute;
 	width: 15px;
@@ -323,14 +323,37 @@ body.plantLoopBg {
 #p4_leaf_03 { left: 647px; bottom: 40px;}
 #p4_leaf_04 { left: 647px; bottom: 80px;}
 
+/*for plant_05*/
+#p5_leaf_01 { left: 815px; bottom: 20px;}
+#p5_leaf_02 { left: 815px; bottom: 60px;}
+#p5_leaf_03 { left: 840px; bottom: 40px;}
+#p5_leaf_04 { left: 840px; bottom: 80px;}
+#p5_leaf_05 { left: 815px; bottom: 100px;}
+
+/*for plant_06*/
+#p6_leaf_01 { left: 1010px; bottom: 20px;}
+#p6_leaf_02 { left: 1010px; bottom: 60px;}
+#p6_leaf_03 { left: 1030px; bottom: 40px;}
+#p6_leaf_04 { left: 1030px; bottom: 80px;}
+#p6_leaf_05 { left: 1010px; bottom: 100px;}
+
 /*for plant_07*/
 #p7_leaf_01 { left: 1135px; bottom: 20px;}
 #p7_leaf_02 { left: 1135px; bottom: 60px;}
 #p7_leaf_03 { left: 1158px; bottom: 40px;}
 #p7_leaf_04 { left: 1158px; bottom: 80px;}
+#p7_leaf_05 { left: 1135px; bottom: 100px;}
 
 
 
+/*================= FLOWER BLOOMS =================*/
+#bloom_01 {
+	position: absolute;
+	width: 170px;
+	height: 170px;
+	left: 943px;
+	bottom: 200px;
+}
 
 
 
