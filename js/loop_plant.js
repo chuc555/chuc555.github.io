@@ -15,6 +15,10 @@ $(document).ready(function() {
 	$('#bloom_01').hide();
 	$('#bloom_02').hide();
 	$('#bloom_03').hide();
+	$('#bloom_04').hide();
+	$('#bloom_05').hide();
+	$('#bloom_06').hide();
+	$('#bloom_07	').hide();
 	
 
 	// ====================== checking for the cookie ====================== 

@@ -1,8 +1,7 @@
 /********** PAGE STYLES**********/
 body {
 	background-color: #262626;
-
-	/*cursor: none;*/
+	cursor: none;
 }
 
 html {
@@ -125,7 +124,7 @@ a {
 #moon_full_1, 
 #moon_lastqtr, 
 #moon_newmoon, 
-#moon_waninggib1, 
+#moon_waninggib_1, 
 #moon_waxingcrescent, 
 #moon_waxinggib {
   bottom: 15px;
@@ -135,6 +134,9 @@ a {
   width: 18%;
   display: none; 
 }
+
+
+
 
 
 /*#canvas {

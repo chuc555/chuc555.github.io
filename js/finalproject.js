@@ -1,6 +1,7 @@
 $(document).ready(function(){
   console.log("let's party")
 
+
   $.ajax({
       url: "http://api.aerisapi.com/sunmoon/new+york,ny?from=12/1/2017&to=12/31/2017&limit=31&client_id=RYKd6OkQ0wMCnI251nZFU&client_secret=fl3umvN9IydoTwbh9pHffSmOLkdIJxZ5yXnqoO9M",
       dataType: "jsonp",
@@ -246,8 +247,9 @@ light.onmousemove = function(event) {
 //         }
 
 
-// SCROLL  
-// $('body,html').animate({ scrollTop: $('body').height() }, 180000);
+setTimeout(function(){
+  $('body,html').animate({ scrollTop: $('body').height() }, 190000);
+}, 2000);
 
 
 
