@@ -120,14 +120,22 @@ a {
   display: none;
 }
 
-#moon_waningcrescent, #moon_firstqtr, #moon_full_1, #moon_lastqtr, #moon_newmoon, #moon_waninggib1, #moon_waxingcrescent, #moon_waxinggib {
-  bottom: 10px;
+#moon_waningcrescent, 
+#moon_firstqtr, 
+#moon_full_1, 
+#moon_lastqtr, 
+#moon_newmoon, 
+#moon_waninggib1, 
+#moon_waxingcrescent, 
+#moon_waxinggib {
+  bottom: 15px;
+  left: 15px;
   position: fixed;
   z-index: 2000;
   width: 18%;
-  display: none;
-  left: 10px;
+  display: none; 
 }
+
 
 /*#canvas {
 	height: 100%; 

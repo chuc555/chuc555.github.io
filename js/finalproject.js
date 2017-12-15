@@ -1,7 +1,5 @@
 $(document).ready(function(){
-
-	console.log("let's party")
-
+  console.log("let's party")
 
   $.ajax({
       url: "http://api.aerisapi.com/sunmoon/new+york,ny?from=12/1/2017&to=12/31/2017&limit=31&client_id=RYKd6OkQ0wMCnI251nZFU&client_secret=fl3umvN9IydoTwbh9pHffSmOLkdIJxZ5yXnqoO9M",
@@ -46,7 +44,7 @@ $(document).ready(function(){
           // CHANGING COLOR TONE 
           if (currentTime == currentSunRise) {
             // do something
-          }
+          };
 
           // CHANGING LIGHT OPACITY  
           // convert current illuminosity number into a decimal
@@ -85,81 +83,63 @@ $(document).ready(function(){
 
           if (moonPhaseName == "new moon") {
             change_favicon('./img/favicon_newmoon.png');
-            $('#square').mouseenter(function(){
-              $('#moon_newmoon').fadeIn(600);
-            });
-          $('#square').mouseleave(function(){
-              $('#moon_newmoon').fadeOut(600);
-            });            
           } else if (moonPhaseName == "waxing crescent") {
             change_favicon('./img/favicon_waxingcrescent.png')
-            $('#square').mouseenter(function(){
-              $('#moon_newmoon').fadeIn(600);
-            });
-          $('#square').mouseleave(function(){
-              $('#moon_newmoon').fadeOut(600);
-            }); 
           } else if (moonPhaseName == "first quarter") {
-            change_favicon('./img/favicon_firstqtr.png') 
-            $('#square').mouseenter(function(){
-              $('#moon_newmoon').fadeIn(600);
-            });
-          $('#square').mouseleave(function(){
-              $('#moon_newmoon').fadeOut(600);
-            });                         
+            change_favicon('./img/favicon_firstqtr.png')           
           } else if (moonPhaseName == "waxing gibbous") {
-            change_favicon('./img/favicon_waxinggib.png')
-            $('#square').mouseenter(function(){
-              $('#moon_newmoon').fadeIn(600);
-            });
-          $('#square').mouseleave(function(){
-              $('#moon_newmoon').fadeOut(600);
-            });              
+            change_favicon('./img/favicon_waxinggib.png')            
           } else if (moonPhaseName == "full moon") {
-            change_favicon('./img/favicon_moonface.png')
-            $('#square').mouseenter(function(){
-              $('#moon_newmoon').fadeIn(600);
-            });
-          $('#square').mouseleave(function(){
-              $('#moon_newmoon').fadeOut(600);
-            });              
+            change_favicon('./img/favicon_moonface.png')             
           } else if (moonPhaseName == "waning gibbous") {
-            change_favicon('./img/favicon_waninggib.png')
-            $('#square').mouseenter(function(){
-              $('#moon_newmoon').fadeIn(600);
-            });
-          $('#square').mouseleave(function(){
-              $('#moon_newmoon').fadeOut(600);
-            });              
+            change_favicon('./img/favicon_waninggib.png')            
           } else if (moonPhaseName == "last quarter") {
             change_favicon('./img/favicon_lastqtr.png')
-            $('#square').mouseenter(function(){
-              $('#moon_lastqtr').fadeIn(600);
-            });
-          $('#square').mouseleave(function(){
-              $('#moon_lastqtr').fadeOut(600);
-            });
-          };
           } else if (moonPhaseName == "waning crescent") {
-            change_favicon('./img/favicon_waningcrescent.png');
-            $('#square').mouseenter(function(){
-              $('#moon_waningcrescent').fadeIn(600);
+            change_favicon('./img/favicon_waningcrescent.png')};
+
+
+          var moonProgress = [
+            './img/moon_newmoon.png',
+            './img/moon_waxingcrescent.png',
+            './img/moon_firstqtr.png',
+            './img/moon_waxinggib.png',
+            './img/moon_full_1.png',
+            './img/moon_waninggib.png',
+            './img/moon_lastqtr.png',
+            './img/moon_waningcrescent.png'
+          ];
+
+          $('#square').mouseenter(function(){
+            if(moonPhaseName =="new moon"){
+              $('#moon_newmoon').fadeIn(650);
+            } else if (moonPhaseName == "waxing crescent") {
+              $('#moon_waxingcrescent').fadeIn(650);
+            } else if (moonPhaseName == "first quarter") {
+              $('#moon_firstqtr').fadeIn(650);
+            } else if (moonPhaseName == "waxing gibbous") {
+              $('#moon_waxinggib').fadeIn(650);
+            } else if (moonPhaseName == "full moon") {
+              $('#moon_full_1').fadeIn(650);
+            } else if (moonPhaseName == "waning gibbous") {
+              $('#moon_waninggib').fadeIn(650); 
+            } else if (moonPhaseName == "last quarter") {
+              $('#moon_lastqtr').fadeIn(650);
+            } else if (moonPhaseName == "waning crescent") {
+              $('#moon_waningcrescent').fadeIn(650);
+              }
             });
-          $('#square').mouseleave(function(){
-              $('#moon_waningcrescent').fadeOut(600);
+
+            $('#square').mouseleave(function(){
+              $('#moon_newmoon').fadeOut(550);
+              $('#moon_waxingcrescent').fadeOut(550);
+              $('#moon_firstqtr').fadeOut(550);
+              $('#moon_waxinggib').fadeOut(550);
+              $('#moon_full_1').fadeOut(550);
+              $('#moon_waninggib').fadeOut(550);
+              $('#moon_lastqtr').fadeOut(550);
+              $('#moon_waningcrescent').fadeOut(550);
             });
-          };
-
-
-          // $('#square').mouseenter(function(){
-          //     $('#moon_waningcrescent').fadeIn(600);
-          //   });
-          // $('#square').mouseleave(function(){
-          //     $('#moon_waningcrescent').fadeOut(600);
-          //   });
-
-
-
 
 
         } // json if statement end
@@ -267,7 +247,7 @@ light.onmousemove = function(event) {
 
 
 // SCROLL  
-// $('body,html').animate({ scrollTop: $('body').height() }, 150000);
+// $('body,html').animate({ scrollTop: $('body').height() }, 180000);
 
 
 

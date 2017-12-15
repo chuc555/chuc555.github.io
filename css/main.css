@@ -235,7 +235,7 @@ body.plantLoopBg {
     background-color: #59AFFF;
     width: 35px;
     height: 35px;
-    opacity: 0.75;
+    opacity: 0;
     position: absolute;
     margin-bottom: 40px;
 
@@ -249,7 +249,7 @@ body.plantLoopBg {
     top: 10px;
 }
 
-/*================= PLANT STEMS =================*/
+/*================= STEMS =================*/
 .plants {
 	position: absolute;
 	bottom: 0;
@@ -261,30 +261,37 @@ body.plantLoopBg {
 
 #plant_01 {
 	margin-left: 12.5%;
+	max-height: 300px;
 }
 
 #plant_02 {
 	margin-left: 25%;
+	max-height: 420px;
 }
 
 #plant_03 {
 	margin-left: 37.5%;
+	max-height: 300px;
 }
 
 #plant_04 {
 	margin-left: 50%;
+	max-height: 400px;
 }
 
 #plant_05 {
 	margin-left: 62.5%;
+	max-height: 350px;
 }
 
 #plant_06 {
 	margin-left: 75%;
+	max-height: 290px;
 }
 
 #plant_07 {
 	margin-left: 87.5%;
+	max-height: 370px;
 }
 
 
@@ -317,7 +324,7 @@ leaves on right side: 3, 4, 6, 8*/
 #p2_leaf_05 { left: 24%; bottom: 100px;}
 #p2_leaf_06 { left: 25.5%; bottom: 120px;}
 #p2_leaf_07 { left: 24%; bottom: 140px;}
-#p2_leaf_08 { left: 25.5%; bottom: 140px;}
+#p2_leaf_08 { left: 25.5%; bottom: 160px;}
 
 /*for plant_03*/
 #p3_leaf_01 { left: 36.5%; bottom: 20px;}
@@ -378,10 +385,62 @@ leaves on right side: 3, 4, 6, 8*/
 
 /*================= FLOWER BLOOMS =================*/
 #bloom_01 {
-	width: 170px;
-	height: 170px;
-	left: 500px;
-	bottom: 200px;
+	position: absolute;
+	width: 195px;
+	height: 195px;
+	left: 6%;
+	bottom: 250px;
+}
+
+#bloom_02 {
+	position: absolute;
+	width: 190px;
+	height: 190px;
+	left: 19%;
+	bottom: 380px;
+}
+
+#bloom_03 {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	left: 32%;
+	bottom: 250px;
+}
+
+#bloom_04 {
+	position: absolute;
+	width: 205px;
+	height: 205px;
+	left: 44%;
+	bottom: 370px;
+	transform: rotate(30deg)
+}
+
+#bloom_05 {
+	position: absolute;
+	width: 185px;
+	height: 185px;
+	left: 56.5%;
+	bottom: 300px;
+}
+
+#bloom_06 {
+	position: absolute;
+	width: 190px;
+	height: 190px;
+	left: 69.5%;
+	bottom: 250px;
+	transform: rotate(30deg)
+}
+
+#bloom_07 {
+	position: absolute;
+	width: 190px;
+	height: 190px;
+	left: 81.5%;
+	bottom: 320px;
+	transform: rotate(18deg)
 }
 
 

@@ -123,8 +123,6 @@ light.onmousemove = function(event) {
 
 
 
-
-
 // what is this
 
 
