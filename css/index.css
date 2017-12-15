@@ -69,4 +69,7 @@ a:hover {
 .responsive img {display: none;}
 .responsive:hover img {display: block; position: absolute; left: 40px; top: 140px; height: 320px;}
 
+.API img {display: none;}
+.API:hover img {display: block; position: absolute; left: 40px; top: 140px; height: 320px;}
+
 
