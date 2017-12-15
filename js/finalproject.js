@@ -247,9 +247,9 @@ light.onmousemove = function(event) {
 //         }
 
 
-setTimeout(function(){
-  $('body,html').animate({ scrollTop: $('body').height() }, 190000);
-}, 2000);
+// setTimeout(function(){
+//   $('body,html').animate({ scrollTop: $('body').height() }, 190000);
+// }, 2000);
 
 
 
