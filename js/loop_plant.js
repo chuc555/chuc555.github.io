@@ -11,6 +11,8 @@ $(document).ready(function() {
 	var heights = [plantHt_01, plantHt_02, plantHt_03, plantHt_04, plantHt_05, plantHt_06, plantHt_07];
 	var start = [0,0,0,0,0,0,0];
 
+	var plantDate_01 = $('#plant_01').
+
 	$('.leaves').hide();
 	$('#bloom_01').hide();
 	$('#bloom_02').hide();
@@ -18,7 +20,7 @@ $(document).ready(function() {
 	$('#bloom_04').hide();
 	$('#bloom_05').hide();
 	$('#bloom_06').hide();
-	$('#bloom_07	').hide();
+	$('#bloom_07').hide();
 	
 
 	// ====================== checking for the cookie ====================== 
@@ -27,7 +29,8 @@ $(document).ready(function() {
 		var savedHeights = Cookies.getJSON('allPlantHeights')
 		console.log(savedHeights); //prints out the array of heights last left off
 
-		if (Cookies.getJSON('plant_03_date')){
+
+			if (Cookies.getJSON('plant_03_date')){
 			var plantDay = Cookies.getJSON('plant_03_date');
 			var d = new Date();
 			var currentDay = d.getDate();
@@ -35,12 +38,28 @@ $(document).ready(function() {
 
 			console.log(difference);
 
-		if (difference >= 0 && difference < 3){
-				// stay green
-			}
-		}
-
-
+			if (difference >= 0 && difference < 3){
+				$(".plants").css('opacity','0.8')
+				$(".leaves").css('opacity','0.8')
+				$(".blooms").css('opacity','0.8')
+			} else if (difference >= 3 && difference < 6){
+				$(".plants").css('opacity','0.6')
+				$(".leaves").css('opacity','0.6')
+				$(".blooms").css('opacity','0.6')
+			} else if (difference >= 6 && difference < 9){
+				$(".plants").css('opacity','0.4')
+				$(".leaves").css('opacity','0.4')
+				$(".blooms").css('opacity','0.4')
+			} else if (difference >= 9 && difference < 12){
+				$(".plants").css('opacity','0.2')
+				$(".leaves").css('opacity','0.2')
+				$(".blooms").css('opacity','0.2')
+			} else if (difference >= 12 && difference < 15){
+				$(".plants").css('opacity','0')
+				$(".leaves").css('opacity','0')
+				$(".blooms").css('opacity','0')
+			};
+		}; // end of date cookie statement
 
 
 		// space to update each height in the array
@@ -149,6 +168,7 @@ $(document).ready(function() {
 		});
 
 
+
 		$('.plants').click(function(){
 			console.log($(this).height());
 			console.log('hello');
@@ -180,6 +200,10 @@ $(document).ready(function() {
 		var windowHeight = $(window).height()
 			// console.log(windowHeight)
 
+		var d = new Date();
+		var n = d.getDate()
+		console.log(n);
+
 		TweenMax.set('#droplet',{opacity: 1 });
 		TweenMax.fromTo('#droplet',1.0, 
 			{opacity: 1, top: yValue + 45, scale: 0.5, left: xValue - 27}, 
@@ -199,6 +223,8 @@ $(document).ready(function() {
         		$('#plant_01').css('height','300px'); 
         		console.log('p1 more than 300');
     		};
+
+    		Cookies.set('plant_01_date', n, {expires: 15});
 		}
 
 		// =========== stem region 2 =========== 
@@ -214,6 +240,8 @@ $(document).ready(function() {
         		$('#plant_02').css('height','420px'); 
         		console.log('p2 more than 420');
     		};
+
+			Cookies.set('plant_02_date', n, {expires: 15});    		
 		}
 
 		// =========== stem region 3 =========== 
@@ -230,11 +258,11 @@ $(document).ready(function() {
         		console.log('more than 300');
     		};
 		
-		var d = new Date();
-		var n = d.getDate()
-		console.log(n);
+			// var d = new Date();
+			// var n = d.getDate()
+			// console.log(n);
 
-		Cookies.set('plant_03_date', n, {expires: 10});
+			Cookies.set('plant_03_date', n, {expires: 15});
 
 		}
 
@@ -249,7 +277,9 @@ $(document).ready(function() {
     		} else {
         		$('#plant_04').css('height','400px');
         		console.log('more than 400');
-    		};		
+    		};	
+
+    		Cookies.set('plant_04_date', n, {expires: 15});	
 		}
 
 		// =========== stem region 5 =========== 
@@ -264,6 +294,8 @@ $(document).ready(function() {
         		$('#plant_04').css('height','350px');
         		console.log('more than 350');
     		};			
+
+    		Cookies.set('plant_05_date', n, {expires: 15});	
 		}
 
 		// =========== stem region 6 ===========
@@ -280,6 +312,8 @@ $(document).ready(function() {
         		console.log('more than 290');
     		};	
 
+    		Cookies.set('plant_06_date', n, {expires: 15});	
+
 		}
 
 		// =========== stem region 7 ===========
@@ -294,6 +328,8 @@ $(document).ready(function() {
         		$('#plant_07').css('height','370px');
         		console.log('more than 370');
     		};	
+
+    		Cookies.set('plant_07_date', n, {expires: 15});	
 		}
 
 

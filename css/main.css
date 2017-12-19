@@ -249,6 +249,7 @@ body.plantLoopBg {
     top: 10px;
 }
 
+
 /*================= STEMS =================*/
 .plants {
 	position: absolute;
@@ -384,19 +385,24 @@ leaves on right side: 3, 4, 6, 8*/
 
 
 /*================= FLOWER BLOOMS =================*/
+.blooms {
+	position: absolute;
+}
+
+
 #bloom_01 {
 	position: absolute;
 	width: 195px;
 	height: 195px;
-	left: 6%;
+	left: 7%;
 	bottom: 250px;
 }
 
 #bloom_02 {
 	position: absolute;
-	width: 190px;
-	height: 190px;
-	left: 19%;
+	width: 200px;
+	height: 200px;
+	left: 19.5%;
 	bottom: 380px;
 }
 
@@ -419,25 +425,25 @@ leaves on right side: 3, 4, 6, 8*/
 
 #bloom_05 {
 	position: absolute;
-	width: 185px;
-	height: 185px;
-	left: 56.5%;
+	width: 190px;
+	height: 190px;
+	left: 57%;
 	bottom: 300px;
 }
 
 #bloom_06 {
 	position: absolute;
-	width: 190px;
-	height: 190px;
+	width: 195px;
+	height: 195px;
 	left: 69.5%;
 	bottom: 250px;
-	transform: rotate(30deg)
+	transform: rotate(25deg)
 }
 
 #bloom_07 {
 	position: absolute;
-	width: 190px;
-	height: 190px;
+	width: 210px;
+	height: 210px;
 	left: 81.5%;
 	bottom: 320px;
 	transform: rotate(18deg)
